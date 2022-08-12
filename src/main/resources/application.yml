@@ -1,0 +1,22 @@
+server:
+  port: 7090
+  
+spring:
+  mvc:
+    view:
+      prefix: /WEB-INF/views/
+      suffix: .jsp
+      
+  datasource: #jdbc 환경설정
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1/mydb?characterEncoding=utf-8
+    username: root
+    password: khj0105
+  servlet: #파일업로드 환경설정
+    multipart:
+      max-file-size: 20MB
+      enabled: true
+        
+mybatis:
+  type-aliases-package: com.mome.myapp.vo
+  mapper-locations: mapper/*Mapper.xml
